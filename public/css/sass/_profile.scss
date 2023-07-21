@@ -1,0 +1,169 @@
+.wrap_profile {
+  height: 500px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  label {
+    display: block;
+  }
+  .btn_change_pass {
+    padding: 5px 10px;
+    background-color: #6a5af9;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+  }
+  .form_modal_pass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+  }
+  .box_profile {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 80%;
+    height: 450px;
+    display: flex;
+    overflow-y: hidden;
+    .box_info {
+      padding: 10px;
+      width: 20%;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid #ccc;
+      img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 100rem;
+      }
+    }
+    .box_address {
+      overflow-y: scroll;
+      padding: 20px;
+      width: 80%;
+      .wrap_list_aria {
+        // padding: 0 10px;
+        margin-top: 30px;
+        .detailAddress {
+          width: 100%;
+          height: 100px;
+          resize: none;
+          border: 1px solid #ccc;
+          padding: 5px;
+        }
+      }
+      .address_btn {
+        padding: 10px;
+        color: white;
+        background-color: #6a5af9;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+      }
+      &_heading {
+        text-align: center;
+        font-weight: 600;
+        font-size: 25px;
+      }
+      .address_chose {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+
+        .wrap_list_pr {
+          width: 30%;
+          position: relative;
+        }
+        .list_province {
+          position: absolute;
+          display: none;
+          background-color: white;
+          width: 100%;
+          list-style: none;
+          margin-top: 5px;
+          max-height: 200px;
+          overflow-y: scroll;
+          li {
+            padding: 10px;
+            cursor: pointer;
+            &:hover {
+              background-color: bisque;
+            }
+          }
+        }
+        .list_province.open {
+          display: block;
+        }
+        input {
+          padding: 4px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .wrap_list_address {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+
+    .user_name_order {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .user_details_order,
+    .user_add_order {
+      color: #a8a29e;
+      font-size: 14px;
+    }
+    .user_details_order {
+      max-width: 300px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    li {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      width: 400px;
+    }
+    .wrap_list_address_btn {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .btn_up {
+        background-color: #6a5af9;
+      }
+      .btn_del {
+        background-color: #ef4444;
+      }
+      button {
+        padding: 5px 15px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+  }
+}
